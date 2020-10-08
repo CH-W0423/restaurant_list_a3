@@ -29,7 +29,7 @@ app.get("/search", (req, res) => {
       restaurant.category.toLowerCase().includes(keyword.toLowerCase())
     );
   });
-  res.render("index", { restaurants: restaurants });
+  res.render("index", { restaurants: restaurants, keyword: keyword });
 });
 
 // start and listen on the Express server
